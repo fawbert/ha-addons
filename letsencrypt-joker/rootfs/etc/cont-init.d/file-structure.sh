@@ -64,9 +64,9 @@ echo -e "dns_desec_token = $(bashio::config 'dns.desec_token')\n" \
       "dns_easydns_endpoint = $(bashio::config 'dns.easydns_endpoint')\n" \
       "dns_easydns_usertoken = $(bashio::config 'dns.easydns_token')\n" \
       "dns_easydns_userkey = $(bashio::config 'dns.easydns_key')\n" \
-      "dns_joker_username =$(bashio::config 'dns.dns_joker_username)" \
-      "dns_joker_password =$(bashio::config 'dns.dns_joker_password)" \
-      "dns_joker_domain =$(bashio::config 'dns.dns_joker_domain)" > /data/dnsapikey
+      "dns_joker_username =$(bashio::config 'dns.dns_joker_username')" \
+      "dns_joker_password =$(bashio::config 'dns.dns_joker_password')" \
+      "dns_joker_domain =$(bashio::config 'dns.dns_joker_domain')" > /data/dnsapikey
 
 if bashio::config.exists 'dns.google_domains_zone'; then
       echo -e "dns_google_domains_zone = $(bashio::config 'dns.google_domains_zone')\n" >> /data/dnsapikey
