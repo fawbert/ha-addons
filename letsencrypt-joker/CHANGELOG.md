@@ -1,5 +1,9 @@
 # Changelog
 
+## 5.0.17
+
+- Add Joker.com DNS challenge support
+
 ## 5.0.15
 
 - Add easyDNS challenge support

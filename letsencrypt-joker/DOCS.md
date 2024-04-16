@@ -54,6 +54,7 @@ dns-gehirn
 dns-google
 dns-hetzner
 dns-infomaniak
+dns-joker
 dns-linode
 dns-luadns
 dns-njalla
@@ -91,6 +92,9 @@ directadmin_url: ''
 directadmin_username: ''
 directadmin_password: ''
 dnsimple_token: ''
+dns_joker_username: ''
+dns_joker_password: ''
+dns_joker_domain: ''
 dnsmadeeasy_api_key: ''
 dnsmadeeasy_secret_key: ''
 duckdns_token: ''
@@ -833,6 +837,24 @@ easyDNS REST API access must be requested and granted in order to use this modul
   ```
 </details>
 
+<details>
+  <summary>Joker.com DNS</summary>
+
+Use the Dynamic DNS credentials supplied by Joker.com when you enable Dynamic DNS on your domain. Do NOT use your joker.com login details.
+  ```yaml
+  email: your.email@example.com
+  domains:
+    - your.domain.tld
+  certfile: fullchain.pem
+  keyfile: privkey.pem
+  challenge: dns
+  dns:
+    provider: dns-joker
+    dns_joker_username: 0123456789abcdef
+    dns_joker_password: ****
+    dns_joker_domain: your.domain.tld
+  ```
+</details>
 
 ## Certificate files
 
@@ -858,6 +880,7 @@ dns-gehirn
 dns-google
 dns-hetzner
 dns-infomaniak
+dns-joker
 dns-linode
 dns-luadns
 dns-njalla

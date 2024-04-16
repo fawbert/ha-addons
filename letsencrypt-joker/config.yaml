@@ -63,6 +63,9 @@ schema:
     google_domains_zone: str?
     hetzner_api_token: str?
     infomaniak_api_token: str?
+    dns_joker_username: str?
+    dns_joker_password: str?
+    dns_joker_domain: str?
     linode_key: str?
     linode_version: str?
     luadns_email: email?
@@ -87,7 +90,7 @@ schema:
       dns-hetzner|dns-infomaniak|dns-linode|dns-luadns|dns-njalla|dns-nsone|\
       dns-porkbun|dns-ovh|dns-rfc2136|dns-route53|dns-sakuracloud|\
       dns-namecheap|dns-netcup|dns-gandi|dns-transip|dns-inwx|dns-dreamhost|\
-      dns-he|dns-easydns)?"
+      dns-he|dns-easydns|dns-joker)?"
     rfc2136_algorithm: str?
     rfc2136_name: str?
     rfc2136_port: str?

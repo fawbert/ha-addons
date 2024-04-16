@@ -122,10 +122,18 @@ elif [ "${CHALLENGE}" == "dns" ] && [ "${DNS_PROVIDER}" == "dns-infomaniak" ]; t
     bashio::config.require 'dns.infomaniak_api_token'
     PROVIDER_ARGUMENTS+=("--authenticator" "${DNS_PROVIDER}" "--${DNS_PROVIDER}-credentials" /data/dnsapikey "--${DNS_PROVIDER}-propagation-seconds" "${PROPAGATION_SECONDS}")
 
+# Joker.com
+elif [ "${CHALLENGE}" == "dns" ] && [ "${DNS_PROVIDER}" == "dns-joker" ]; then
+    bashio::config.require 'dns.dns_joker_username'
+    bashio::config.require 'dns.dns_joker_password'
+    bashio::config.require 'dns.dns_joker_domain'
+    PROVIDER_ARGUMENTS+=("--authenticator" "${DNS_PROVIDER}" "--${DNS_PROVIDER}-credentials" "/data/dnsapikey" "--${DNS_PROVIDER}-propagation-seconds" "${PROPAGATION_SECONDS}")
+
 # Njalla
 elif [ "${CHALLENGE}" == "dns" ] && [ "${DNS_PROVIDER}" == "dns-njalla" ]; then
     bashio::config.require 'dns.njalla_token'
     PROVIDER_ARGUMENTS+=("--authenticator" "${DNS_PROVIDER}" "--${DNS_PROVIDER}-credentials" "/data/dnsapikey" "--${DNS_PROVIDER}-propagation-seconds" "${PROPAGATION_SECONDS}")
+
 
 # rfc2136
 elif [ "${CHALLENGE}" == "dns" ] && [ "${DNS_PROVIDER}" == "dns-rfc2136" ]; then
