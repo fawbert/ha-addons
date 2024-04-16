@@ -5,7 +5,7 @@ name: Let's Encrypt
 description: Manage certificate from Let's Encrypt
 url: https://github.com/home-assistant/addons/tree/master/letsencrypt
 arch:
-0  - amd64
+  - amd64
   - i386
 boot: manual
 image: homeassistant/{arch}-addon-letsencrypt
