@@ -1,14 +1,14 @@
 ---
 version: 5.0.17
 slug: letsencrypt-joker
-name: Let's Encrypt
+name: Let's Encrypt with Joker.com DNS
 description: Manage certificate from Let's Encrypt
-url: https://github.com/fawbert/ha-addons/tree/add-joker-dns/letsencrypt-joker
+url: https://github.com/fawbert/addons/tree/add-joker-dns/letsencrypt-joker
 arch:
   - amd64
   - i386
 boot: manual
-image: homeassistant/{arch}-addon-letsencrypt
+image: jonfawbert/{arch}-addon-letsencrypt-joker
 init: false
 map:
   - ssl:rw
